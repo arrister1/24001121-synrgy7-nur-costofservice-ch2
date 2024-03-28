@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CalculatorApp</string>
+    <string name="hint_cost_of_service">Biaya Layanan</string>
+    <string name="how_was_the_service">Bagaimana pelayanannya?</string>
+    <string name="amazing_20">Mengesankan (20%)</string>
+    <string name="good_18">Baik (18%)</string>
+    <string name="ok_15">Ok (15%)</string>
+    <string name="roundup_tip">Bulatkan tip?</string>
+    <string name="tip_amount">Total Tip</string>
+    <string name="total_tip_amount">$$$</string>
+    <string name="total_amount">Total Pembayaran</string>
+    <string name="total_pay_amount">$$$$$</string>
+    <string name="btn_pay_now">Bayar sekarang</string>
+</resources>

@@ -11,11 +11,11 @@
         android:id="@+id/header_bg"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:background="@color/navy"
-        app:shapeAppearanceOverlay="@style/Rounded"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/Rounded" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/header_img"
@@ -31,192 +31,230 @@
         android:layout_width="350dp"
         android:layout_height="350dp"
         android:layout_marginTop="125dp"
+        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="@id/header_bg"
         app:layout_constraintStart_toStartOf="@id/header_bg"
         app:layout_constraintTop_toTopOf="@id/header_bg"
-        app:shapeAppearanceOverlay="@style/FullRounded"
-        android:background="@color/white"
-        >
+        app:shapeAppearanceOverlay="@style/FullRounded">
+
     </com.google.android.material.imageview.ShapeableImageView>
 
     <EditText
         android:id="@+id/edt_cost"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:inputType="number"
         android:layout_marginTop="30dp"
-        android:hint="Cost of Service"
-        android:fontFamily="@font/poppins_bold"
-        android:textSize="26sp"
         android:backgroundTint="@color/navy2"
+        android:fontFamily="@font/poppins_bold"
+        android:hint="@string/hint_cost_of_service"
+        android:textColorHint="@color/navy4"
+        android:inputType="number"
+        android:textColor="@color/navy3"
         android:textAlignment="center"
-        app:layout_constraintTop_toTopOf="@id/cv_main_layout"
+        android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="@id/cv_main_layout"
         app:layout_constraintStart_toStartOf="@id/cv_main_layout"
-        />
+        app:layout_constraintTop_toTopOf="@id/cv_main_layout" />
 
     <TextView
         android:id="@+id/tv_cost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="How was the service?"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/poppins_semibold"
+        android:text="@string/how_was_the_service"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/edt_cost"
+        app:layout_constraintEnd_toEndOf="@id/edt_cost"
         app:layout_constraintStart_toStartOf="@id/edt_cost"
-        app:layout_constraintEnd_toEndOf="@id/edt_cost"/>
+        app:layout_constraintTop_toBottomOf="@id/edt_cost" />
 
-    <ImageButton
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_cost1"
+        android:layout_width="85dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:backgroundTint="@color/light_blue3"
+        app:strokeColor="@color/light_blue3"
+        app:layout_constraintStart_toStartOf="@id/cv_main_layout"
+        app:layout_constraintEnd_toStartOf="@id/cv_cost2"
+        app:layout_constraintTop_toBottomOf="@id/tv_cost"
+        app:layout_constraintHorizontal_chainStyle="spread_inside">
+
+    <ImageView
         android:id="@+id/img_opt1"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="20dp"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:background="none"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
         android:src="@drawable/emoji_amazing"
-        app:layout_constraintTop_toBottomOf="@id/tv_cost"
-        app:layout_constraintStart_toStartOf="@id/cv_main_layout"
-        app:layout_constraintEnd_toStartOf="@id/img_opt2"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-
         />
+
     <TextView
         android:id="@+id/tv_opt1"
-        android:text="Amazing (20%)"
-        android:textColor="@color/black"
-
         android:layout_width="80dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/img_opt1"
-        app:layout_constraintStart_toStartOf="@id/img_opt1"
-        app:layout_constraintEnd_toEndOf="@id/img_opt1"
-        android:textAlignment="center"/>
+        android:text="@string/amazing_20"
+        android:layout_marginTop="70dp"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:textColor="@color/black" />
+    </com.google.android.material.card.MaterialCardView>
 
-    <ImageButton
-        android:id="@+id/img_opt2"
-        android:layout_marginTop="20dp"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="none"
-
-        android:src="@drawable/emoji_good"
-        app:layout_constraintStart_toEndOf="@id/img_opt1"
-        app:layout_constraintEnd_toStartOf="@id/img_opt3"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_cost2"
+        android:layout_width="85dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/light_blue3"
+        app:strokeColor="@color/light_blue3"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/cv_cost1"
+        app:layout_constraintEnd_toStartOf="@+id/cv_cost3"
         app:layout_constraintTop_toBottomOf="@id/tv_cost"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintHorizontal_chainStyle="spread_inside">
 
-        />
-    <TextView
-        android:id="@+id/tv_opt2"
-        android:text="Good (18%)"
-        android:textColor="@color/black"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/img_opt2"
-        app:layout_constraintStart_toStartOf="@id/img_opt2"
-        app:layout_constraintEnd_toEndOf="@id/img_opt2"
-        android:textAlignment="center"/>
+        <ImageView
+            android:id="@+id/img_opt2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/emoji_good"
+            />
 
-    <ImageButton
-        android:id="@+id/img_opt3"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginTop="20dp"
-        android:background="none"
+        <TextView
+            android:id="@+id/tv_opt2"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/good_18"
+            android:layout_marginTop="70dp"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:textColor="@color/black" />
+    </com.google.android.material.card.MaterialCardView>
 
-        android:src="@drawable/emoji_ok"
-        app:layout_constraintStart_toEndOf="@id/img_opt2"
-        app:layout_constraintTop_toBottomOf="@id/tv_cost"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_cost3"
+        android:layout_width="85dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:backgroundTint="@color/light_blue3"
+        app:strokeColor="@color/light_blue3"
+        app:layout_constraintStart_toEndOf="@id/cv_cost2"
         app:layout_constraintEnd_toEndOf="@id/cv_main_layout"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        />
-    <TextView
-        android:id="@+id/tv_opt3"
-        android:text="Ok (15%)"
-        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/tv_cost"
+        app:layout_constraintHorizontal_chainStyle="spread_inside">
 
-        android:layout_width="40dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/img_opt3"
-        app:layout_constraintStart_toStartOf="@id/img_opt3"
-        app:layout_constraintEnd_toEndOf="@id/img_opt3"
-        android:textAlignment="center"/>
+        <ImageView
+            android:id="@+id/img_opt3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/emoji_ok"
+            />
+
+        <TextView
+            android:id="@+id/tv_opt3"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ok_15"
+            android:layout_marginTop="70dp"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:textColor="@color/black" />
+    </com.google.android.material.card.MaterialCardView>
+
 
     <TextView
         android:id="@+id/tv_roundup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Roundup tip?"
+        android:text="@string/roundup_tip"
         android:textSize="12sp"
+        android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toTopOf="@id/tv_tip"
-        app:layout_constraintStart_toStartOf="@id/btn_pay"
         app:layout_constraintEnd_toStartOf="@id/toggle_switch"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@id/btn_pay" />
+
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/toggle_switch"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:backgroundTint="@color/navy4"
-        app:layout_constraintStart_toEndOf="@id/tv_roundup"
-        app:layout_constraintEnd_toEndOf="@id/btn_pay"
         app:layout_constraintBottom_toTopOf="@id/tv_tip_amount"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+        app:layout_constraintEnd_toEndOf="@id/btn_pay"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@id/tv_roundup" />
     />
+
     <TextView
         android:id="@+id/tv_tip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tip Amount:"
+        android:text="@string/tip_amount"
         android:textSize="13sp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@id/tv_total"
-        app:layout_constraintStart_toStartOf="@id/btn_pay"
-        />
+        app:layout_constraintStart_toStartOf="@id/btn_pay" />
+
     <TextView
         android:id="@+id/tv_tip_amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="$$$"
-        android:textSize="13sp"
+        android:text="@string/total_tip_amount"
         android:textAlignment="textEnd"
+        android:textSize="13sp"
+        android:layout_marginBottom="10dp"
+
         app:layout_constraintBottom_toTopOf="@id/tv_total"
-        app:layout_constraintEnd_toEndOf="@id/btn_pay"
-        />
+        app:layout_constraintEnd_toEndOf="@id/btn_pay" />
+
     <TextView
         android:id="@+id/tv_total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Total Amount:"
-        android:textSize="16sp"
-        android:textColor="@color/black"
         android:fontFamily="@font/poppins_extrabold"
+        android:text="@string/total_amount"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginBottom="5dp"
         app:layout_constraintBottom_toTopOf="@id/btn_pay"
         app:layout_constraintStart_toStartOf="@id/btn_pay"
-        />
+        app:layout_constraintEnd_toStartOf="@id/tv_total_amount"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
     <TextView
         android:id="@+id/tv_total_amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="$$$$$"
-        android:fontFamily="@font/poppins_extrabold"
-        android:textSize="16sp"
-        android:textColor="@color/black"
+        android:layout_marginBottom="5dp"
 
+        android:fontFamily="@font/poppins_extrabold"
+        android:text="@string/total_pay_amount"
         android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@id/btn_pay"
-        app:layout_constraintEnd_toEndOf="@id/btn_pay"
-        />
+        app:layout_constraintStart_toEndOf="@id/tv_total"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintEnd_toEndOf="@id/btn_pay" />
+
     <Button
         android:id="@+id/btn_pay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginBottom="32dp"
-        android:text="Pay now"
         android:backgroundTint="@color/navy2"
+        android:text="@string/btn_pay_now"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
