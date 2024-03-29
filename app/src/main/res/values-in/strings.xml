@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">CalculatorApp</string>
+    <string name="app_name">Biaya Layanan</string>
     <string name="hint_cost_of_service">Biaya Layanan</string>
     <string name="how_was_the_service">Bagaimana pelayanannya?</string>
     <string name="amazing_20">Mengesankan (20%)</string>

@@ -8,12 +8,6 @@ import android.widget.TextView
 import com.example.calculatorapp.databinding.ActivityMainBinding
 import com.google.android.material.card.MaterialCardView
 
-
-
-
-
-
-
 class MainActivity : AppCompatActivity() {
 //    private lateinit var binding: ActivityMainBinding
 
@@ -34,6 +28,5 @@ class MainActivity : AppCompatActivity() {
 }
 
 //private fun MaterialCardView.setOnClickListener() {
-//    TODO("Not yet implemented")
 //}
 
